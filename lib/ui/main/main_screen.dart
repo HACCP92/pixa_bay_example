@@ -6,14 +6,21 @@ import 'package:pixa_bay/ui/Shape/shape_box.dart';
 import 'package:pixa_bay/ui/Shape/shape_photo.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
+  const MainScreen({Key? key}) : super(key: key);
 
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<PixabayDto> photos = [];
+  List<PixabayDto> photos = []; // Initialize an empty list
+
+  @override
+  void initState() {
+    super.initState();
+    // Add some initial data to the photos list
+    photos = [];
+  }
 
   Future<void> searchPhotos(String query) async {
     photos = await fetchPhotos(query);
@@ -25,13 +32,13 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
       appBar: AppBar(
         title: ShapeBox(
-            onSearch:
-                searchPhotos), // Pass the searchPhotos function as a callback
+          onSearch: searchPhotos,
+        ),
       ),
       body: ListView(
         children: [
           const SizedBox(height: 10),
-          ShapePhoto(photos: photos), // Pass the list of photos
+          ShapePhoto(photos: photos),
         ],
       ),
     );

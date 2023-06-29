@@ -7,7 +7,7 @@ part of 'pixabay_dto.dart';
 // **************************************************************************
 
 PixabayDto _$PixabayDtoFromJson(Map<String, dynamic> json) => PixabayDto(
-      id: json['id'],
+      id: json['id'] as int,
       webformatURL: json['webformatURL'] as String,
       largeImageURL: json['largeImageURL'] as String,
       tags: json['tags'] as String,
