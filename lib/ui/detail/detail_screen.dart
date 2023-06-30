@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:pixa_bay/model/pixabay_dto.dart';
+// import 'package:pixa_bay/model/pixabay_dto.dart';
+import 'package:pixa_bay_example/model/pixabay_dto.dart';
 
 class DetailScreen extends StatelessWidget {
-  final PixabayDto photo;
+  final Photo photo;
 
   const DetailScreen({required this.photo});
 

@@ -1,9 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:pixa_bay/api/pixabay_api.dart';
-import 'package:pixa_bay/model/pixabay_dto.dart';
-import 'package:pixa_bay/ui/Shape/shape_box.dart';
-import 'package:pixa_bay/ui/Shape/shape_photo.dart';
+// import 'package:pixa_bay/api/pixabay_api.dart';
+// import 'package:pixa_bay/model/pixabay_dto.dart';
+// import 'package:pixa_bay/ui/Shape/shape_box.dart';
+// import 'package:pixa_bay/ui/Shape/shape_photo.dart';
+import 'package:pixa_bay_example/api/pixabay_api.dart';
+import 'package:pixa_bay_example/model/pixabay_dto.dart';
+import 'package:pixa_bay_example/ui/Shape/shape_box.dart';
+import 'package:pixa_bay_example/ui/Shape/shape_photo.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -13,7 +17,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  List<PixabayDto> photos = []; // Initialize an empty list
+  List<Photo> photos = []; // Initialize an empty list
 
   @override
   void initState() {

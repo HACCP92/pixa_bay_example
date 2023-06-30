@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:pixa_bay/ui/search/search.dart';
+// import 'package:pixa_bay/ui/search/search.dart';
+import 'package:pixa_bay_example/ui/search/search.dart';
 
 class ShapeBox extends StatelessWidget {
   final ValueChanged<String> onSearch;

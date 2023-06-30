@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pixa_bay/model/pixabay_dto.dart';
-import 'package:pixa_bay/ui/detail/detail_screen.dart';
+// import 'package:pixa_bay/model/pixabay_dto.dart';
+// import 'package:pixa_bay/ui/detail/detail_screen.dart';
+import 'package:pixa_bay_example/model/pixabay_dto.dart';
+import 'package:pixa_bay_example/ui/detail/detail_screen.dart';
 
 class ShapePhoto extends StatefulWidget {
-  final List<PixabayDto> photos;
+  final List<Photo> photos;
 
   const ShapePhoto({required this.photos});
 
@@ -12,7 +14,7 @@ class ShapePhoto extends StatefulWidget {
 }
 
 class _ShapePhotoState extends State<ShapePhoto> {
-  PixabayDto? selectedPhoto;
+  Photo? selectedPhoto;
 
   @override
   Widget build(BuildContext context) {
@@ -39,11 +41,11 @@ class _ShapePhotoState extends State<ShapePhoto> {
           child: Hero(
             tag: photo.id,
             child: Container(
-              width: 166,
-              height: 166,
+              width: 155,
+              height: 155,
               decoration: ShapeDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(photo.webformatURL),
+                  image: NetworkImage(photo.id as String),
                   fit: BoxFit.fill,
                 ),
                 shape: RoundedRectangleBorder(
