@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 
 class Search extends StatelessWidget {
-  final ValueChanged<String> onSearch;
+  final Function(String) onSearch;
 
-  const Search({super.key, required this.onSearch});
+  const Search({Key? key, required this.onSearch});
 
   @override
   Widget build(BuildContext context) {
     return TextField(
-      onChanged: onSearch,
+      onChanged: (value) => onSearch(value),
       decoration: const InputDecoration(
         suffixIcon: Icon(Icons.search),
         hintText: '검색해주세요',
