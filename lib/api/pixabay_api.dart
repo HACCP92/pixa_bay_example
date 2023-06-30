@@ -1,6 +1,5 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
-// import 'package:pixa_bay/model/pixabay_dto.dart';
 import 'package:pixa_bay_example/model/pixabay_dto.dart';
 
 Future<List<Photo>> fetchPhotos(String query) async {

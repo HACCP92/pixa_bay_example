@@ -1,17 +1,16 @@
 import 'package:flutter/material.dart';
-// import 'package:pixa_bay/model/pixabay_dto.dart';
 import 'package:pixa_bay_example/model/pixabay_dto.dart';
 
 class DetailScreen extends StatelessWidget {
   final Photo photo;
 
-  const DetailScreen({required this.photo});
+  const DetailScreen({super.key, required this.photo});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('클릭된 사진입니다'),
+        title: const Text('클릭된 사진입니다'),
       ),
       body: Padding(
         padding: const EdgeInsets.all(10.0),

@@ -1,6 +1,4 @@
 import 'package:flutter/foundation.dart';
-// import 'package:pixa_bay/api/pixabay_api.dart';
-// import 'package:pixa_bay/model/pixabay_dto.dart';
 import 'package:pixa_bay_example/api/pixabay_api.dart';
 import 'package:pixa_bay_example/model/pixabay_dto.dart';
 

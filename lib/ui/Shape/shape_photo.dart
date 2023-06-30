@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-// import 'package:pixa_bay/model/pixabay_dto.dart';
-// import 'package:pixa_bay/ui/detail/detail_screen.dart';
 import 'package:pixa_bay_example/model/pixabay_dto.dart';
 import 'package:pixa_bay_example/ui/detail/detail_screen.dart';
 
@@ -41,11 +39,11 @@ class _ShapePhotoState extends State<ShapePhoto> {
           child: Hero(
             tag: photo.id,
             child: Container(
-              width: 155,
-              height: 155,
+              width: 166,
+              height: 166,
               decoration: ShapeDecoration(
                 image: DecorationImage(
-                  image: NetworkImage(photo.id as String),
+                  image: NetworkImage(photo.largeImageURL),
                   fit: BoxFit.fill,
                 ),
                 shape: RoundedRectangleBorder(
